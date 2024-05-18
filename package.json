@@ -1,0 +1,47 @@
+{
+	"name": "@drift-labs/drift-v2-exporter",
+	"version": "0.1.0",
+	"author": "wphan",
+	"main": "lib/index.js",
+	"license": "Apache-2.0",
+	"dependencies": {
+		"@drift-labs/sdk": "2.82.0-beta.19",
+		"@opentelemetry/api": "^1.1.0",
+		"@opentelemetry/auto-instrumentations-node": "^0.31.0",
+		"@opentelemetry/exporter-prometheus": "^0.31.0",
+		"@opentelemetry/sdk-node": "^0.31.0",
+		"@solana/web3.js": "^1.22.0",
+		"@types/bn.js": "^5.1.0",
+		"@types/chai": "^4.3.4",
+		"@types/jest": "^29.2.4",
+		"@types/mocha": "^10.0.1",
+		"commander": "^12.0.0",
+		"dotenv": "^10.0.0",
+		"typescript": "4.5.4",
+		"winston": "^3.8.1"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^4.28.0",
+		"@typescript-eslint/parser": "^4.28.0",
+		"chai": "^4.3.7",
+		"eslint": "^7.29.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-prettier": "^3.4.0",
+		"husky": "^7.0.4",
+		"mocha": "^10.2.0",
+		"prettier": "^2.4.1",
+		"sinon": "^15.1.2",
+		"ts-mockito": "^2.6.1",
+		"ts-node": "^10.9.1"
+	},
+	"scripts": {
+		"dev": "ts-node src/index.ts",
+		"prettify:fix": "prettier --write './src/**/*.ts'",
+		"lint:fix": "eslint . --ext ts --fix",
+		"test": "mocha -r ts-node/register tests/**/*.ts",
+		"test:inspect": "mocha --inspect-brk -r ts-node/register tests/**/*.ts"
+	},
+	"engines": {
+		"node": ">=20"
+	}
+}
